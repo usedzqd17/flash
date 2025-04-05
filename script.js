@@ -36,5 +36,13 @@ function nextCard() {
     }
 }
 
+function backCard() {
+    if (currentCard < flashcards.length - 1) {
+        flashcards[currentCard].style.display = 'none';  // Masquer la carte actuelle
+        currentCard--;  // Passer à la carte suivante
+        initCards();  // Afficher la nouvelle carte
+    }
+}
+
 // Appeler l'initialisation des cartes
 initCards();
